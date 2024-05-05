@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Project</title>
+    <style>
+        body {
+            padding-top: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: cursive;
+            background-color: #EDE4FF;
+        }
+
+        #container {
+            width: 250px;
+            height: 350px;
+            background-color: #A076F9;
+            border-radius: 10px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        #main {
+            padding: 10px;
+            text-align: center;
+        }
+
+        p {
+            color: #EDE4FF;
+
+        }
+
+        button {
+            transition-duration: 0.8s;
+            width: 90px;
+        }
+
+        button:hover {
+            background-color: #21bd26;
+            /* Green */
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="main">
+            <p id="type" style="font-size:30px;">Hello</p>
+            <p id="joke" style="font-size:20px;">Hello</p>
+            <div class="button-container">
+                <button>New Joke</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var url = '://v2.jokeapi.dev/joke/Programming?type=single';
+        var type = document.getElementById('type');
+        var joke = document.getElementById('joke');
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                type.innerText = data.type;
+                joke.innerText = data.joke;
+            })
+    </script>
+</body>
+
+</html>

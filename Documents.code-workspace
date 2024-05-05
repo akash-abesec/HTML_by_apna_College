@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"regex": "c",
+			"iostream": "cpp"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "JokeApiProject"
+	}
+}
